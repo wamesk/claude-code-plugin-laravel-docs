@@ -1,0 +1,8 @@
+{
+  "name": "laravel-docs",
+  "description": "Generate Laravel project specifications (technical, business, admin) for individual models or modules. Auto-detects modular (wamesk/*) vs flat (app/Models) project structure. Configurable output paths, custom prompts per type, and per-project config.",
+  "author": {
+    "name": "Stanislav Červeňák",
+    "email": "info@wame.sk"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://wame.sk/laravel-docs.schema.json",
+  "types": {
+    "technical": {
+      "enabled": true,
+      "output_path": "docs/technical",
+      "prompt_path": null
+    },
+    "business": {
+      "enabled": true,
+      "output_path": "docs/business",
+      "prompt_path": null
+    },
+    "admin": {
+      "enabled": true,
+      "output_path": "docs/admin",
+      "prompt_path": null
+    }
+  },
+  "modular_strategy": "per_module_with_root_index",
+  "model_search_paths": [
+    "app/Models",
+    "wamesk/*/src/Models",
+    "Modules/*/Models",
+    "Modules/*/app/Models"
+  ],
+  "excluded_models": [],
+  "language": "auto",
+  "overwrite_existing": false,
+  "generate_index_threshold": 2
+}
