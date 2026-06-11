@@ -126,26 +126,33 @@ For every entry in `indexes[]`:
        (extract module from each file's path by reading the file's location
        on disk after writing)
 
+Because every file is named `{Label} ({Model}).md` (spaces **and**
+parentheses in the name), the link destination must be wrapped in angle
+brackets `<...>` — the CommonMark angle-bracket form. Without it the literal
+`)` truncates the destination and the spaces break the link, so the generated
+index links do not resolve. Always emit the destination as `<...>`.
+
 The index list should look like (for modular):
 
 ```markdown
 # Technical documentation
 
 ## Module: order
-- [Objednávky (Order)](../../wamesk/order/docs/technical/Objednávky (Order).md)
-- [Položka objednávky (OrderItem)](../../wamesk/order/docs/technical/Položka objednávky (OrderItem).md)
+- [Objednávky (Order)](<../../wamesk/order/docs/technical/Objednávky (Order).md>)
+- [Položka objednávky (OrderItem)](<../../wamesk/order/docs/technical/Položka objednávky (OrderItem).md>)
 
 ## Module: ticket
-- [Lístok (Ticket)](../../wamesk/ticket/docs/technical/Lístok (Ticket).md)
+- [Lístok (Ticket)](<../../wamesk/ticket/docs/technical/Lístok (Ticket).md>)
 ```
 
-For flat layout, just one ungrouped list:
+For flat layout, just one ungrouped list (still using the angle-bracket form,
+since the file names contain spaces and parentheses too):
 
 ```markdown
 # Technical documentation
 
-- [Order](Order.md)
-- [Invoice](Invoice.md)
+- [Order](<Order.md>)
+- [Invoice](<Invoice.md>)
 ```
 
 ### Step 7 — Final summary
